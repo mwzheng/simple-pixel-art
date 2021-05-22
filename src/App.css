@@ -34,6 +34,10 @@ tr, td {
     background-color: white;
 }
 
+#form {
+    margin: 15px 0px;
+}
+
 .formSpan {
     font-size: 1vw;
     margin: 10px 0px 10px 20px;

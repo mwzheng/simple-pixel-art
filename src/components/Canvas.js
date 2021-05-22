@@ -2,28 +2,28 @@ import React from 'react';
 import Pixel from './Pixel';
 
 // Compoent to create the entire canvas for the pixel art
-const Canvas = () => {
+const Canvas = ({ rows, cols }) => {
     // Makes the entire canvas
-    const makeCanvas = (row) => {
+    const makeCanvas = (rowLength) => {
         let table = [];
-        let rows = row;
+        let rowNumber = 0;
 
-        while (rows !== 0) {
-            table.push(<tr key={`row${rows}`}>{makeCanvasRow(48)}</tr>);
-            rows--;
+        while (rowNumber !== rowLength) {
+            table.push(<tr key={`row${rowNumber}`}>{makeCanvasRow(cols)}</tr>);
+            rowNumber++;
         }
 
         return table;
     }
 
     // Makes a single row on the canvas
-    const makeCanvasRow = (columns) => {
+    const makeCanvasRow = (columnLength) => {
         let x = [];
-        let cols = columns;
+        let colNumber = 0;
 
-        while (cols !== 0) {
-            x.push(<td key={`col${cols}`}><Pixel mark='unmarked' /></td>);
-            cols--;
+        while (colNumber !== columnLength) {
+            x.push(<td key={`col${colNumber}`}><Pixel mark='unmarked' /></td>);
+            colNumber++;
         }
 
         return x;
@@ -32,7 +32,7 @@ const Canvas = () => {
     return <div>
         <table>
             <tbody>
-                {makeCanvas(28)}
+                {makeCanvas(rows)}
             </tbody>
         </table>
     </div >
