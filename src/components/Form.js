@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component allows for user to expand/retract canvas size
 const Form = ({ rows, cols, setRows, setCols }) => {
     const addRow = () => {
         setRows(rows + 1);
@@ -10,10 +11,12 @@ const Form = ({ rows, cols, setRows, setCols }) => {
     }
 
     const delRow = () => {
+        if (rows === 1) return;
         setRows(rows - 1);
     }
 
     const delCol = () => {
+        if (cols === 1) return;
         setCols(cols - 1);
     }
 
