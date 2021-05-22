@@ -4,13 +4,14 @@ import Form from './components/Form';
 import Canvas from './components/Canvas'
 
 function App() {
-  const [rows, setRows] = useState(6);
-  const [cols, setCols] = useState(6);
+  const [rows, setRows] = useState(20);
+  const [cols, setCols] = useState(20);
+  const [color, setColor] = useState('#000000');
 
   return (
     <>
-      <Form rows={rows} setRows={setRows} cols={cols} setCols={setCols} />
-      <Canvas rows={rows} cols={cols} />
+      <Form rows={rows} setRows={setRows} cols={cols} setCols={setCols} setColor={setColor} />
+      <Canvas rows={rows} cols={cols} color={color} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component allows for user to expand/retract canvas size
-const Form = ({ rows, cols, setRows, setCols }) => {
+const Form = ({ rows, cols, setRows, setCols, setColor }) => {
     const addRow = () => {
         setRows(rows + 1);
     }
@@ -20,13 +20,19 @@ const Form = ({ rows, cols, setRows, setCols }) => {
         setCols(cols - 1);
     }
 
+    const changeColor = e => {
+        setColor(e.target.value);
+    }
+
     return <div id='form'>
         <span className='formSpan'>Rows: </span>
         <button className='formBttn' onClick={addRow}>+</button>
         <button className='formBttn' onClick={delRow}>-</button>
-        <span className='formSpan'> Columns: </span>
+        <span className='formSpan'>Columns: </span>
         <button className='formBttn' onClick={addCol}>+</button>
         <button className='formBttn' onClick={delCol}>-</button>
+        <span className='formSpan'>Color: </span>
+        <input type='color' onChange={e => changeColor(e)}></input>
     </div>
 }
 
