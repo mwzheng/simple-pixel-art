@@ -1,1 +1,46 @@
+*:focus {outline:none}
 
+body {
+    text-align: center;
+    margin: 20px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+button:hover {
+    background-color: rgb(153, 121, 121);
+}
+
+button {
+    background-color: white;
+    width: 2vw;
+    height: 2vw;
+    transition: .1s .2 ease-in-out;
+}
+
+tr, td {
+    margin: -10px;
+    padding: 0px;
+}
+
+.marked {
+    background-color: black;
+}
+
+.unmarked {
+    background-color: white;
+}
+
+.formSpan {
+    font-size: 1vw;
+    margin: 10px 0px 10px 20px;
+}
+
+.formBttn {
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+}
