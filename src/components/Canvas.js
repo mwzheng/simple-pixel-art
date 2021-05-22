@@ -22,7 +22,7 @@ const Canvas = ({ rows, cols }) => {
         let colNumber = 0;
 
         while (colNumber !== columnLength) {
-            x.push(<td key={`col${colNumber}`}><Pixel mark='unmarked' /></td>);
+            x.push(<td key={`col${colNumber}`}><Pixel /></td>);
             colNumber++;
         }
 
