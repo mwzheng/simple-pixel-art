@@ -25,10 +25,10 @@ const Form = ({ rows, cols, setRows, setCols, setColor }) => {
     }
 
     return <div id='form'>
-        <span className='formSpan'>Rows: </span>
+        <span className='formSpan'>Rows ({rows}): </span>
         <button className='formBttn' onClick={addRow}>+</button>
         <button className='formBttn' onClick={delRow}>-</button>
-        <span className='formSpan'>Columns: </span>
+        <span className='formSpan'>Columns ({cols}): </span>
         <button className='formBttn' onClick={addCol}>+</button>
         <button className='formBttn' onClick={delCol}>-</button>
         <span className='formSpan'>Color: </span>
