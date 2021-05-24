@@ -2,27 +2,22 @@
 
 body {
     text-align: center;
-    margin: 20px;
 }
 
 table {
     margin: auto;
     border-collapse: collapse;
-}
-
-button:hover {
-    background-color: rgb(153, 121, 121);
+    border-spacing: 0;
 }
 
 button {
     background-color: white;
     width: 1.5vw;
     height: 1.5vw;
-    transition: .1s .2 ease-in-out;
+    border-width: .1px;
 }
 
 tr, td {
-    margin: -10px;
     padding: 0px;
 }
 
@@ -40,7 +35,7 @@ tr, td {
 }
 
 .formBttn {
-    width: 20px;
-    height: 20px;
-    font-weight: bold;
+    width: 1vw;
+    height: 1vw;
+    /* font-weight: bold; */
 }
